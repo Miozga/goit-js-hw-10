@@ -3,6 +3,12 @@ import axios from 'axios';
 axios.defaults.headers.common['X-API-KEY'] =
   'live_GPdbtXWRvc1C4dOEz0ur4a4sE7wwUMyKM2QoALqcu1rgdJ2La9AvqU31xIqtIw2x ';
 
+document.addEventListener('DOMContentLoaded', function () {
+  new SlimSelect({
+    select: '.breed-select',
+  });
+});
+
 async function fetchBreeds() {
   try {
     const response = await axios.get('https://api.thecatapi.com/v1/breeds');
